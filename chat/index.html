@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <link href="style.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body ng-controller="ChatCtrl">
+<div>
+<form ng-submit="addItem()" >
+  <input ng-show="!currentUser" type="text" placeholder="Enter a NickName" ng-model="user">
+    <br />
+    <input type="text" placeholder="Say Something" ng-model="newMessage.chatMessage"/>
+<br/>
+<input class = "btn btn-primary" type="submit" id="submit" value="Send Message" />
+  
+</form>
+
+<br/>
+    <div id="list-container">
+        <table class="table table-hover table-striped table-bordered todolist">
+            <tr ng-repeat="message in Messages" >
+                
+                <td style="width:100%">
+                    <b>{{message.user}}</b> : <span>{{message.data.chatMessage}}</span></td>
+            </tr>
+        </table>
+    </div>
+
+    
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>
+<script type="text/javascript" 
+        src="http://launchpad-demo.dreamfactory.com:9292/bayeux/client.js">
+        </script>
+<script src="app.js"></script>
+
+
+
+</body>
+</html>

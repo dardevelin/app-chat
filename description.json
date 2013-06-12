@@ -1,0 +1,8 @@
+{
+	"api_name":"chat",
+	"name":"Chat",
+	"description":"A simple chat app using Faye for pub-sub.",
+	"is_active":1,
+	"url":"/index.html",
+	"is_url_external":0
+}
